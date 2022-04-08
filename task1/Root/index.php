@@ -36,11 +36,14 @@ if ($_POST) {
           </div>
           <button class="btn btn-primary">Calc</button>
         </form>
+        <div class="alert alert-success">
+          The root of this Number:
         <?php 
         if (isset($message)) {
           echo $message ;
         }
         ?>
+        </div>
       </div>
     </div>
   </div>

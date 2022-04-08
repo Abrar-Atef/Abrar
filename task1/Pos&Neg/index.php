@@ -3,7 +3,7 @@ if ($_POST) {
   if($_POST['Enter_Num']>0) {
       $message =
         "<div class='alert alert-success'> 
-         positive Number :
+         positive Number : $_POST[Enter_Num]
       </div>";
   }elseif($_POST['Enter_Num']==0) {
     $message =
@@ -13,7 +13,7 @@ if ($_POST) {
 }else{
     $message =
       "<div class='alert alert-success'> 
-        Negative Number
+        Negative Number : $_POST[Enter_Num]
     </div>";
   }
 }

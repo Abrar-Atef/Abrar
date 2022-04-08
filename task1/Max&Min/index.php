@@ -3,44 +3,44 @@ if ($_POST) {
   if($_POST['First_Num'] > $_POST['Second_Num'] &&  $_POST['Second_Num'] > $_POST['Third_Num'] ) {
       $message =
         "<div class='alert alert-success'> 
-         Max Number is first Number 
+         Max Number is first Number : $_POST[First_Num]
          <br>
-         Min Number is Third Number 
+         Min Number is Third Number : $_POST[Third_Num] 
       </div>";
   }elseif($_POST['First_Num'] > $_POST['Third_Num'] &&  $_POST['Third_Num'] > $_POST['Second_Num'] ) {
     $message =
       "<div class='alert alert-success'> 
-       Max Number is first Number 
+       Max Number is first Number : $_POST[First_Num]
        <br>
-       Min Number is Second Number 
+       Min Number is Second Number : $_POST[Second_Num]
     </div>";
 }elseif($_POST['Second_Num'] > $_POST['First_Num'] &&  $_POST['First_Num'] > $_POST['Third_Num'] ) {
   $message =
     "<div class='alert alert-success'> 
-     Max Number is Second Number 
+     Max Number is Second Number : $_POST[Second_Num]
      <br>
-     Min Number is Third Number 
+     Min Number is Third Number : $_POST[Third_Num] 
   </div>";
 }elseif($_POST['Second_Num'] > $_POST['Third_Num'] &&  $_POST['Third_Num'] > $_POST['First_Num'] ) {
   $message =
     "<div class='alert alert-success'> 
-     Max Number is Second Number 
+     Max Number is Second Number : $_POST[Second_Num]
      <br>
-     Min Number is First Number 
+     Min Number is First Number : $_POST[First_Num]
   </div>";
 }elseif($_POST['Third_Num'] > $_POST['First_Num'] &&  $_POST['First_Num'] > $_POST['Second_Num'] ) {
   $message =
     "<div class='alert alert-success'> 
-     Max Number is Third Number 
+     Max Number is Third Number : $_POST[Third_Num] 
      <br>
-     Min Number is Second Number 
+     Min Number is Second Number : $_POST[Second_Num]
   </div>";
 }elseif($_POST['Third_Num'] > $_POST['Second_Num'] &&  $_POST['Second_Num'] > $_POST['First_Num'] ) {
   $message =
     "<div class='alert alert-success'> 
-     Max Number is Third Number 
+     Max Number is Third Number : $_POST[Third_Num] 
      <br>
-     Min Number is First Number 
+     Min Number is First Number : $_POST[First_Num]
   </div>";
 }else{
   "<div class='alert alert-danger'> 

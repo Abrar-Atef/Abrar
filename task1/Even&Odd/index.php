@@ -3,12 +3,12 @@ if ($_POST) {
   if($_POST['Enter_Num']%2==0) {
       $message =
         "<div class='alert alert-success'> 
-         Even Number
+         Even Number : $_POST[Enter_Num]
       </div>";
   } else{
     $message =
       "<div class='alert alert-success'> 
-        Odd Number
+        Odd Number : $_POST[Enter_Num]
     </div>";
   }
 }
