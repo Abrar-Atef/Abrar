@@ -1,24 +1,23 @@
 <?php
 
 if ($_POST) {
-  $maxResult = 250 ;
-  $total = $_POST['Physics_Grade'] + $_POST['Chemistry_Grade'] + $_POST['Biology_Grade'] + $_POST['Math_Grade'] +$_POST['Computer_Grade'];
-  $your_result = (($total/$maxResult)*100) ;
+  $maxResult = 250;
+  $total = $_POST['Physics_Grade'] + $_POST['Chemistry_Grade'] + $_POST['Biology_Grade'] + $_POST['Math_Grade'] + $_POST['Computer_Grade'];
+  $your_result = (($total / $maxResult) * 100);
   $your_grade = "";
-  if ($your_result >= 90){
-    $your_grade = "A" ;
-  }elseif(  $your_result < 90 && $your_result >=80 ){
-    $your_grade = "B" ;
-  }elseif( $your_result < 80 && $your_result >=70  ){
-    $your_grade = "C" ;
-  }elseif( $your_result < 70 && $your_result >=60  ){
-    $your_grade = "D" ;
-  }elseif( $your_result < 60 && $your_result >=40 ){
-    $your_grade = "E" ;
-  }else{
-    $your_grade = "F" ;
+  if ($your_result >= 90) {
+    $your_grade = "A";
+  } elseif ($your_result < 90 && $your_result >= 80) {
+    $your_grade = "B";
+  } elseif ($your_result < 80 && $your_result >= 70) {
+    $your_grade = "C";
+  } elseif ($your_result < 70 && $your_result >= 60) {
+    $your_grade = "D";
+  } elseif ($your_result < 60 && $your_result >= 40) {
+    $your_grade = "E";
+  } else {
+    $your_grade = "F";
   }
-  
 }
 
 ?>
@@ -31,7 +30,7 @@ if ($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Even&Odd</title>
+  <title>Task 01</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="js/bootstrap.bundle.js"></script>
 </head>
@@ -67,12 +66,12 @@ if ($_POST) {
           <button class="btn btn-primary">Result</button>
         </form>
         <div class="alert alert-success">
-        <?php
-        if (isset($total)) {
-           echo ("Max result =". $maxResult . "<br>" . "your total result = " . $total  . "<br>" . "your total precentage = ". $your_result."%" . "<br>" ."your grade is : ". $your_grade
-        );
-        }
-        ?>
+          <?php
+          if (isset($total)) {
+            echo ("Max result =" . $maxResult . "<br>" . "your total result = " . $total  . "<br>" . "your total precentage = " . $your_result . "%" . "<br>" . "your grade is : " . $your_grade
+            );
+          }
+          ?>
         </div>
       </div>
     </div>

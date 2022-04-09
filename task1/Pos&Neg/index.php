@@ -1,16 +1,16 @@
 <?php
 if ($_POST) {
-  if($_POST['Enter_Num']>0) {
-      $message =
-        "<div class='alert alert-success'> 
+  if ($_POST['Enter_Num'] > 0) {
+    $message =
+      "<div class='alert alert-success'> 
          positive Number : $_POST[Enter_Num]
       </div>";
-  }elseif($_POST['Enter_Num']==0) {
+  } elseif ($_POST['Enter_Num'] == 0) {
     $message =
       "<div class='alert alert-success'> 
        Number = 0
     </div>";
-}else{
+  } else {
     $message =
       "<div class='alert alert-success'> 
         Negative Number : $_POST[Enter_Num]
@@ -28,7 +28,7 @@ if ($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Even&Odd</title>
+  <title>Task 01</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="js/bootstrap.bundle.js"></script>
 </head>
@@ -46,9 +46,9 @@ if ($_POST) {
           </div>
           <button class="btn btn-primary">Calc</button>
         </form>
-        <?php 
+        <?php
         if (isset($message)) {
-          echo $message ;
+          echo $message;
         }
         ?>
       </div>

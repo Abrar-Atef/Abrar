@@ -1,8 +1,7 @@
 <?php
 if ($_POST) {
 
-   $message = ($_POST['Enter_Num']) ** (1 / ($_POST['Enter_root']));
- 
+  $message = ($_POST['Enter_Num']) ** (1 / ($_POST['Enter_root']));
 }
 
 ?>
@@ -15,7 +14,7 @@ if ($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Even&Odd</title>
+  <title>Task 01</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="js/bootstrap.bundle.js"></script>
 </head>
@@ -29,20 +28,20 @@ if ($_POST) {
       <div class="col-4 offset-4">
         <form method="post">
           <div class="mb-3">
-            <input type="number" class="form-control" id="Num" name="Enter_Num" placeholder=" Enter Number">
+            <input type="number" class="form-control" name="Enter_Num" placeholder=" Enter Number">
           </div>
           <div class="mb-3">
-            <input type="number" class="form-control" id="Num" name="Enter_root" placeholder=" Enter Root">
+            <input type="number" class="form-control" name="Enter_root" placeholder=" Enter Root">
           </div>
           <button class="btn btn-primary">Calc</button>
         </form>
         <div class="alert alert-success">
-          The root of this Number:
-        <?php 
-        if (isset($message)) {
-          echo $message ;
-        }
-        ?>
+          The root of this number = 
+          <?php
+          if (isset($message)) {
+            echo $message;
+          }
+          ?>
         </div>
       </div>
     </div>
