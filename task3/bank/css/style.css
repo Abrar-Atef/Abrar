@@ -1,0 +1,31 @@
+.bank {
+    width: 100%;
+    height: 85vh;
+    background: url(../images/bank.gif) no-repeat center/cover;
+}
+
+.over-layer {
+    background-color: rgba(60, 60, 60, 0.4);
+    height: 100%;
+}
+
+h1 {
+    color: #0099a8;
+}
+
+form {
+    color: white;
+}
+
+button.btn.btn-outline {
+    background-color: #0099a8;
+    color: white;
+}
+
+thead {
+    background-color: rgb(92, 92, 92);
+}
+
+tbody {
+    background-color: white;
+}
