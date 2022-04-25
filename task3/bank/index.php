@@ -1,13 +1,13 @@
 <?php
 
-if (!empty ($_POST)) {
+if (!empty($_POST)) {
     $userName = $_POST['userName'];
     $loanAmount = $_POST['loanAmount'];
     $loanYears = $_POST['loanYears'];
     $inetrestPerYear = '';
     $inetrestRate = '';
     $inetrestPerMonth = '';
-    $tabel = '' ;
+    $tabel = '';
     if ($loanYears < 3) {
         $inetrestPerYear =  $loanAmount * 0.1;
         $inetrestRate =  $inetrestPerYear * $loanYears;
@@ -19,7 +19,6 @@ if (!empty ($_POST)) {
         $loanAfterInetrest = $loanAmount + $inetrestRate;
         $inetrestPerMonth = $loanAfterInetrest / ($loanYears * 12);
     }
- 
 }
 
 ?>
@@ -51,50 +50,51 @@ if (!empty ($_POST)) {
                         <form method="post" class="w-75">
                             <div class="form-group">
                                 <label class="fs-4 m-2" for="user-name">User Name</label>
-                                <input class="form-control" type="text" name="userName" id="user-name">
+                                <input class="form-control" type="text" name="userName" id="user-name" value="<?= isset ($_POST['userName']) ? $_POST['userName']:''?>">
                             </div>
                             <div class="form-group">
                                 <label class="fs-4 mb-2" for="loan-amount">Loan amount</label>
-                                <input class="form-control" type="number" name="loanAmount" id="loanAmount">
+                                <input class="form-control" type="number" name="loanAmount" id="loanAmount" value="<?= isset ($_POST['loanAmount']) ? $_POST['loanAmount']:''?>">
                             </div>
                             <div class="form-group">
                                 <label class="fs-4 mb-2" for="loan-years">Loan years</label>
-                                <input class="form-control" type="number" name="loanYears" id="loan-years">
+                                <input class="form-control" type="number" name="loanYears" id="loan-years"value="<?= isset ($_POST['loanYears']) ? $_POST['loanYears']:''?>">
                             </div>
                             <button class="btn btn-outline my-3 fs-5">calculate</button>
                         </form>
-                    <?php
-              if (!empty ($_POST)){
-                $tabel = "<table class='table my-3'>
-                <thead class='text-light'>
-                    <tr>
-                        <th>user name</th>
-                        <th>inetrest rate</th>
-                        <th>loan after inetrest </th>
-                        <th> Monthly</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>";
-                    $tabel .= " <td>$userName</td>";
-                    $tabel .= "<td>$inetrestRate</td>";
-                    $tabel .= "<td>$loanAfterInetrest</td>";
-                    $tabel .=" <td>$inetrestPerMonth</td>";
-                    $tabel .= "</tr> 
-
-                </tbody>
-            </table>
-            </table>";
-              }
-                if (!empty ($tabel) && !empty ($_POST)){
-                    echo $tabel;
-                }  ?>
+                        <?php
+                        if (!empty($_POST)) {
+                            $tabel = "<table class='table my-3'>
+                    <thead class='text-light'>
+                        <tr>
+                            <th>user name</th>
+                            <th>inetrest rate</th>
+                            <th>loan after inetrest </th>
+                            <th> Monthly</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>";
+                            $tabel .= " <td>$userName</td>";
+                            $tabel .= "<td>$inetrestRate</td>";
+                            $tabel .= "<td>$loanAfterInetrest</td>";
+                            $tabel .= " <td>$inetrestPerMonth</td>";
+                            $tabel .= "</tr> 
+            
+                    </tbody>
+                </table>
+                </table>";
+                        }
+                        if (!empty($_POST)) {
+                            echo $tabel;
+                        }  ?>
                     </div>
-                    
+
                 </div>
 
             </div>
         </section>
     </div>
 </body>
+
 </html>
