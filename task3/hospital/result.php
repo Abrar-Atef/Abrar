@@ -117,9 +117,9 @@ if (!empty($_POST)) {
                     <td>
                         <?php
                         if ($result <= 25) {
-                            echo "<div class='text-danger fw-bold'>please contact with patient to know the probelm</div>";
+                            echo "<div class='text-danger fw-bold fs-4'>please contact with patient to know the probelm</div>";
                         } else {
-                            echo "<div class='text-primary fw-bold fs-2'>Thank you</div> ";
+                            echo "<div class='text-success fw-bold fs-2'>Thank you</div> ";
                         }
                         ?>
                     </td>
